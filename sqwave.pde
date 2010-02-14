@@ -32,7 +32,7 @@ void interpretSerialInput(byte inp) {
 		if (newfreq == 0) {
 			Serial.print(inp);
 		} else if (newfreq < 4 || newfreq > 1000) {
-			Serial.println(" <-- Invalid frequency (must be 2 <= x <= 1000 kHz)");
+			Serial.println(" <-- Invalid frequency (must be 4 <= x <= 1000 kHz)");
 		} else {
 			uswait = 1000 / newfreq;
 			Timer1.setPeriod(uswait);
